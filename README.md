@@ -25,11 +25,11 @@ Typical usage would include something like this JavaScript snippet in a Django
 template iterating over a collection of name/color pairs in a "countries" var
 and tagging the D3 geometry SVG items with different colors:
 
-document.write('<style>');
-{% for country in countries %}
-document.write('.geometry.' + geoIPToNaturalEarth['{{country.0}}'] + ' { fill: {{country.1}}; } ');
-{% endfor %}
-document.write('</style>');
+    document.write('<style>');
+    {% for country in countries %}
+    document.write('.geometry.' + geoIPToNaturalEarth['{{country.0}}'] + ' { fill: {{country.1}}; } ');
+    {% endfor %}
+    document.write('</style>');
 
 If you can improve this or make it more complete I would be happy to take pull
 requests. That includes expanding it to other languages, such as Ruby.
